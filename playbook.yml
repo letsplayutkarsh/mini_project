@@ -1,0 +1,8 @@
+- name: Pull docker image of Calculator
+  hosts: host_machine
+  tasks:        
+    - name: pull docker image
+      shell: docker pull docker.io/utka4sh/mini_project:latest
+      
+    - name: running container
+      shell: docker run -i -d utka4sh/mini_project:latest
