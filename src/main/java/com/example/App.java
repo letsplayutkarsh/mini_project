@@ -6,9 +6,15 @@ package com.example;
  */
 import java.util.Scanner;
 import java.lang.Math;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class App {
+    private static Logger logger;
     public static void main(String[] args) {
+
+        logger = LogManager.getLogger(App.class);
+
         Scanner sc = new Scanner(System.in);
         int choice;
         do {
@@ -25,6 +31,7 @@ public class App {
                     System.out.print("Enter a number: ");
                     double sqrtNum = sc.nextDouble();
                     System.out.println("The square root of " + sqrtNum + " is " + Math.sqrt(sqrtNum));
+                    logger.info("result of square root of " + sqrtNum + " is: " + Math.sqrt(sqrtNum));
                     break;
                 case 2:
                     System.out.print("Enter a number: ");
@@ -34,11 +41,14 @@ public class App {
                         factorial *= i;
                     }
                     System.out.println(factNum + "! = " + factorial);
+                    logger.info("result of factorial of " + factNum + " is: " + factorial);
                     break;
                 case 3:
                     System.out.print("Enter a number: ");
                     double lnNum = sc.nextDouble();
                     System.out.println("The natural logarithm of " + lnNum + " is " + Math.log(lnNum));
+                    logger.info("result of natural logarithm of " + lnNum + " is: " + Math.log(lnNum));
+
                     break;
                 case 4:
                     System.out.print("Enter a number: ");
@@ -46,6 +56,8 @@ public class App {
                     System.out.print("Enter the exponent: ");
                     double exponent = sc.nextDouble();
                     System.out.println(base + "^" + exponent + " = " + Math.pow(base, exponent));
+                    logger.info("result of exponent " + base + "^" + exponent + " is: " + Math.pow(base, exponent));
+
                     break;
                 case 5:
                     System.out.println("Exiting program...");
