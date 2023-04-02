@@ -16,7 +16,7 @@ public class AppTest {
     public void testSquareRootFunction() {
         double expectedResult = 4.0;
         double actualResult = Math.sqrt(16.0);
-        assertEquals(expectedResult, actualResult, 0.001);
+        assertEquals(expectedResult, actualResult, 0.001);x
     }
     
     @Test

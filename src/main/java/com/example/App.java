@@ -18,7 +18,8 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int choice;
         do {
-            System.out.println("Menu");
+            // hello world
+            System.out.println("New Menu");
             System.out.println("1. Square root function");
             System.out.println("2. Factorial function");
             System.out.println("3. Natural logarithm");
